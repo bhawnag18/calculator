@@ -20,7 +20,7 @@ const Calculator=()=>{
     const handleResult=()=>{
         try{
             // setResult(eval(result));
-            setResult(new Function('return '+result)())
+            setResult(new Function('return '+result)())   // eslint-disable-next-line no-new-func
         }
         catch(error)
         {
