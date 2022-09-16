@@ -19,7 +19,8 @@ const Calculator=()=>{
     }
     const handleResult=()=>{
         try{
-            setResult(eval(result).toString());
+            // setResult(eval(result));
+            setResult(new Function('return '+result)())
         }
         catch(error)
         {
